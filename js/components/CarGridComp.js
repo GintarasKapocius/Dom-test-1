@@ -4,19 +4,34 @@ class CarGridComp {
     this.init()
   }
 
-  fetchCars = () => API.fetchCars(this.saveCars, alert)
+  initFetch = () =>
+    setTimeout(() => {
+      API.fetchCars(
+        (cars) => {
+          this.state.loading = false
+          this.saveCars(cars)
+        },
+        (err) => {
+          alert(err)
+          this.state.loading = false
+          this.render()
+        },
+      )
+    }, 1000)
 
   saveCars = (cars) => {
     this.state.cars = cars
-    this.state.loading = false
+
     this.render()
   }
 
-  showError = alert
+  deleteCar = (id) => {
+    API.deleteCar(id, () => API.fetchCars(this.saveCars, alert), alert)
+  }
 
   init = () => {
     this.state.loading = true
-    this.fetchCars()
+    this.initFetch()
     this.htmlElement = document.createElement('div')
     this.htmlElement.className = 'row g-3'
     this.render()
@@ -35,7 +50,13 @@ class CarGridComp {
     } else if (cars.length > 0) {
       this.htmlElement.innerHTML = ''
       const carElements = cars
-        .map((x) => new CarCardComp(x))
+        .map(
+          ({ id, ...cardProps }) =>
+            new CarCardComp({
+              ...cardProps,
+              onDelete: () => this.deleteCar(id),
+            }),
+        )
         .map((x) => x.htmlElement)
         .map(this.cardWrapper)
       this.htmlElement.append(...carElements)
