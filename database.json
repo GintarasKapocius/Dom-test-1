@@ -11,54 +11,6 @@
         "currency": "€"
       },
       "imgSrc": "https://www.auto-data.net/images/f2/Opel-Astra-G-facelift-2002.jpg"
-    },
-    {
-      "id": "2",
-      "brand": "BMW",
-      "model": "320d",
-      "year": 2004,
-      "fuelType": "dysel",
-      "price": {
-        "amount": 2500.12,
-        "currency": "€"
-      },
-      "imgSrc": "https://1.bp.blogspot.com/-sJ8_whN5x-4/XQ5xkAk4fsI/AAAAAAAAFyw/A002QWT7U244cr-wkSPGVWac4Kg1QkbJQCLcBGAs/s1600/BMW%2B320d%2B-%2B2006Screen%2BShot%2B2019-06-22%2Bat%2B8.19.16%2BPM.png"
-    },
-    {
-      "id": "3",
-      "brand": "Toyota",
-      "model": "Avensis",
-      "year": 2010,
-      "fuelType": "petrol",
-      "price": {
-        "amount": 5000.0,
-        "currency": "€"
-      },
-      "imgSrc": "https://img.autogidas.lt/10_1_6954274/toyota-avensis-2010-2011.jpg"
-    },
-    {
-      "id": "4",
-      "brand": "Tesla",
-      "model": "Model S",
-      "year": 2014,
-      "fuelType": "electric",
-      "price": {
-        "amount": 35000.0,
-        "currency": "$"
-      },
-      "imgSrc": "https://www.auto-data.net/images/f68/Tesla-Model-S.jpg"
-    },
-    {
-      "id": "5",
-      "brand": "Toyta",
-      "model": "Prius",
-      "year": 2008,
-      "fuelType": "hybrid",
-      "price": {
-        "amount": 4000,
-        "currency": "$"
-      },
-      "imgSrc": "https://s.car.info/image_files/full/toyota-prius-back-side-0-422588.jpg"
     }
   ]
 }
